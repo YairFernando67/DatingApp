@@ -5,7 +5,7 @@ namespace DatingApp.API.Dtos
     public class UserForRegisterDto
     {
         [Required]
-        [EmailAddress]
+        [StringLength(6, ErrorMessage="You must use a strong username between 3 and 6 characters tops", MinimumLength=3)]
         public string Username { get; set; }
 
         [Required]
